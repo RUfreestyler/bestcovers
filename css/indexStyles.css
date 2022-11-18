@@ -1,0 +1,45 @@
+.main_posts{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main_post{
+    width: calc(25% - 40px);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    transition: box-shadow 0.2s ease-in;
+    text-decoration: none;
+    color: #000;
+    background: #e9ecef;
+    margin: 20px;
+}
+
+.main_post:hover{
+    box-shadow: 5px 5px #fd7e14;
+    color: #000;
+}
+
+.post_header{
+    font-size: 1.5em;
+}
+
+.post_image-container{
+    width: 100%;
+}
+
+.post_image{
+    width: 100%;
+}
+
+.modal_switcher{
+    outline: none;
+    border: 0;
+    background: white;
+    color: #ef5627;
+}

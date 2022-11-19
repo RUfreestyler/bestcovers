@@ -13,12 +13,16 @@
 <body>
     <?php require "layout.php"; ?>
     <main>
+        <?php 
+            
+        ?>
         <h1 class="main_header">Название поста</h1>
         <div class="main_post">
             <div class="post_player-background" id="player">
                 <iframe class="post_player" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="post_toolbar">
+                <span>Автор: </span>
                 <button type="button" class="">Подписаться</button>
                 <button type="button" class="">Нравится</button>
             </div>

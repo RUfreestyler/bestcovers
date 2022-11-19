@@ -1,4 +1,6 @@
 <?php
+    require "../modules/Database.php";
+
     $login = filter_var(trim($_POST['login']), FILTER_UNSAFE_RAW);
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
     $password = filter_var(trim($_POST['password']), FILTER_UNSAFE_RAW);
@@ -24,12 +26,9 @@
         echo "Пароли не совпадают.";
         exit();
     }
-    $password = md5($password."superSecretKey");
 
-    $db = new mysqli('127.0.0.1','root','','bestcovers', 3306);
-    $stmt = $db->prepare("INSERT INTO client (email, login, password_hash) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $email, $login, $password);
-    $stmt->execute();
+    $db = new Database();
+    $db->registerUser($email, $login, $password);
 
     $cookieOptions = Array('path' => '/');
     setcookie('client', $login, $cookieOptions);

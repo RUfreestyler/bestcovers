@@ -13,7 +13,7 @@
 <body>
     <?php require "layout.php"; ?>
     <main>
-        <form action="/handlers/addPostHandler.php" method="post">
+        <form action="handlers/addPostHandler.php" method="post">
             <label for="link">Введите ссылку на видео с YouTube:</label>   
             <input type="text" class="" name="link" id="link">
             <label for="title">Заголовок поста:</label>

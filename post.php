@@ -14,19 +14,26 @@
     <?php require "layout.php"; ?>
     <main>
         <?php 
+            require "modules/Database.php";
             
+            $db = new Database();
+            $post = $db->executeQuery("SELECT * FROM post WHERE id = ?", $_GET['id']);
+            $post = current($post);
         ?>
-        <h1 class="main_header">Название поста</h1>
+        <h1 class="main_header"><?=$post['title']?></h1>
         <div class="main_post">
             <div class="post_player-background" id="player">
-                <iframe class="post_player" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="post_player" src="<?=$post['videoLink']?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="post_toolbar">
-                <span>Автор: </span>
+                <span>Автор: <?=$post['postOwner']?></span>
                 <button type="button" class="">Подписаться</button>
                 <button type="button" class="">Нравится</button>
             </div>
-            <div class="post_description">Описание</div>
+            <div class="post_description">
+                <h2>Описание</h2>
+                <div><?=$post['description']?></div>
+            </div>
             <div class="post_comments">Комментарии</div>
         </div>
     </main>

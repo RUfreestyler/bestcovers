@@ -1,0 +1,9 @@
+.post_close{
+    display: flex;
+    justify-content: end;
+}
+
+.bi:hover{
+   background: #9d919a; 
+   border-radius: 5px;
+}

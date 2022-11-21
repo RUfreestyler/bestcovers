@@ -9,13 +9,13 @@
                 </li>
             <?php else: ?>
                 <li class="menu_item">
-                    <a class="menu_button">Мои каверы</a>
+                    <a class="menu_button" href="my-covers.php">Мои каверы</a>
                 </li>
                 <li class="menu_item">
-                    <a class="menu_button" href="/profile.php">Мой профиль</a>
+                    <a class="menu_button" href="profile.php">Мой профиль</a>
                 </li>
                 <li class="menu_item">
-                    <a class="menu_button" href="/addPost.php">Создать пост</a>
+                    <a class="menu_button" href="addPost.php">Создать пост</a>
                 </li>
             <?php endif; ?>
         </ul>

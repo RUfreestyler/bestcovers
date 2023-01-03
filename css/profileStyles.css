@@ -1,0 +1,9 @@
+.main_form-update{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_header{
+    margin-bottom: 20px;
+}

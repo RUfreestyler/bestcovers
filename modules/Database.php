@@ -73,5 +73,16 @@
             $this->executeQuery("INSERT INTO client (email, login, password_hash) VALUES (?, ?, ?)", $email, $login, $passwordHash);
             return true;
         }
+
+        public function updateUser($email, $newLogin, $newPassword)
+        {
+            $newPasswordHash = md5($newPassword.$this->key);
+            $this->executeQuery("UPDATE client SET login = ?, password_hash = ? WHERE email = ?", $newLogin, $newPasswordHash, $email);          
+        }
+
+        public function getHash($string)
+        {
+            return md5($string.$this->key);
+        }
     }
 ?>

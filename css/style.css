@@ -99,3 +99,10 @@ a:hover{
     border-style: none;
     margin-top: 10px;
 }
+
+.modal_switcher{
+    outline: none;
+    border: 0;
+    background: white;
+    color: #ef5627;
+}

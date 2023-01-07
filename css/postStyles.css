@@ -14,6 +14,18 @@
     height: 100%;
 }
 
+.post_toolbar{
+    margin-top: 10px;
+}
+
+.post_author{
+    margin-top: 10px;
+}
+
 .main_post{
     width: 60%;
+}
+
+.button-liked{
+    background-color: red;
 }

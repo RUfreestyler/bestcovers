@@ -1,0 +1,7 @@
+.main_form{
+    margin: 0 auto;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -27,6 +27,7 @@ main{
     align-items: center;
     margin-top: 80px;
     flex-grow: 1;
+    padding-top: 20px;
 }
 
 footer{

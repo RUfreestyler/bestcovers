@@ -10,8 +10,6 @@
 
     $content .= 
                 "<form method=\"post\" action=\"handlers/updateUser.php?email=".$user['email']."\" class=\"main_form-update\">
-                    <label>Загрузить фото профиля:</label>
-                    <input type=\"file\" class=\"form-content\" name=\"photo\" style=\"margin-bottom: 30px;\">
                     <label class=\"form-label\">E-mail: ".$user['email']."</label>
                     <label for=\"login\" class=\"form-label\">Логин:</label>
                     <input type=\"text\" name=\"login\" class=\"form-content\" value=\"".$user['login']."\">

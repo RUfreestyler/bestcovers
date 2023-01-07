@@ -1,5 +1,5 @@
 <?php
-    $links = "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/indexStyles.css\"";
+    $links = "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/indexStyles.css\">";
     $title = "BestCovers";
     $content = "<h1 class=\"main_header\">Популярные каверы</h1> <div class=\"main_posts\">";
 

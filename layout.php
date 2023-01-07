@@ -46,31 +46,36 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="validation-form/check.php" id="signupForm">
+                        <form method="post" id="signupForm">
                             <label for="login" class="form-label">Логин (отображаемое имя):</label>
-                            <span class="error"><?php echo $loginErr; ?></span>
-                            <input type="text" class="form-control" name="login">
+                            <input type="text" class="form-control" name="login" id="signup-login">
+                            <div class="error" id="loginErr"></div>
                             <label for="email" class="form-label">Адрес электронной почты:</label>
-                            <input type="email" class="form-control" name="email">
+                            <input type="email" class="form-control" name="email" id="signup-email">
+                            <div class="error" id="emailErr"></div>
                             <label for="password" class="form-label">Пароль:</label>
-                            <input type="password" class="form-control" name="password">
+                            <input type="password" class="form-control" name="password" id="signup-password">
+                            <div class="error" id="passwordErr"></div>
                             <label for="repeat-password" class="form-label">Повторите пароль:</label>
-                            <input type="password" class="form-control" name="repeat-password"> 
-                            <button type="submit" class="button-send">Зарегистрироваться</button>
+                            <input type="password" class="form-control" name="repeat-password" id="signup-repeat-password"> 
+                            <div class="error" id="repPassErr"></div>
+                            <button type="submit" class="button-send" id="button-signup">Зарегистрироваться</button>
                         </form>
-                        <form method="post" action="validation-form/auth.php" id="signinForm">
+                        <form method="post" id="signinForm">
                             <label for="email" class="form-label">Логин или email:</label>
-                            <input type="text" class="form-control" name="email">
+                            <input type="text" class="form-control" name="email" id="signin-email">
+                            <div class="error" id="signinLoginErr"></div>
                             <label for="password" class="form-label">Пароль:</label>
-                            <input type="password" class="form-control" name="password">
-                            <button type="submit" class="button-send">Войти</button>
+                            <input type="password" class="form-control" name="password" id="signin-password">
+                            <div class="error" id="signinPasswordErr"></div>
+                            <button type="submit" class="button-send" id="button-signin">Войти</button>
                         </form>
                     </div>
                 </div>
             </div>
     </div>
     <footer>
-            &copy Мельников Владислав
+            &copy Владислав Мельников
     </footer>    
 </body>
 </html>

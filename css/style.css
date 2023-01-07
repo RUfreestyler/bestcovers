@@ -106,3 +106,8 @@ a:hover{
     background: white;
     color: #ef5627;
 }
+
+.error{
+    color: red;
+    font-size: 0.9em;
+}

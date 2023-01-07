@@ -32,5 +32,7 @@
             </a>";
     }
 
+    $content .= "</div>";
+
     require "layout.php";
 ?>

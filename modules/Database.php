@@ -13,20 +13,17 @@
             $this->mysql->close();
         }
 
-        //Закрывает соединение с БД
         public function closeConnection()
         {
             $this->mysql->close();
         }
 
-        //Возвращает указанную таблицу
         public function getTable($tableName)
         {
             $data = $this->executeQuery("SELECT * FROM ".$tableName);
             return $data;
         }
 
-        //Выполняет запрос
         public function executeQuery($query, ...$params)
         {
             $stmt = $this->mysql->prepare($query);
@@ -45,14 +42,12 @@
             return $data; 
         }
 
-        //Проверяет существование пользователя
         public function userExists($login)
         {
             $user = $this->executeQuery("SELECT * FROM client WHERE email = ? OR login = ?", $login, $login);
-            return count($user) != 0;
+            return count($user) != 0; //false если пользователь не зарегистрирован
         }
 
-        //Проверяет соответствие введенного логина и пароля и возвращает результат запроса
         public function validateUser($login, $password)
         {
             $passwordHash = md5($password.$this->key);
@@ -61,7 +56,6 @@
             return $user;
         }
 
-        //Регистрирует нового пользователя
         public function registerUser($email, $login, $password)
         {
             if($this->userExists($login))

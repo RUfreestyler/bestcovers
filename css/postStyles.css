@@ -29,3 +29,17 @@
 .button-liked{
     background-color: red;
 }
+
+.post_comment{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment_author{
+    font-weight: bold;   
+}
+
+.comment_date{
+    font-size: 0.8em;
+    color: #777;
+}
